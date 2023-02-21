@@ -1,0 +1,15 @@
+<h1>mapbox</h1>
+<div class="select-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Toppings</mat-label>
+    <mat-select [formControl]="filters" multiple (selectionChange)="redrawMap($event)">
+      <mat-option *ngFor="let filter of filterGroup" [value]="filter">{{filter}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div>info</div>
+
+<div id="map" (click)="viewCard()"> </div>
+
+
